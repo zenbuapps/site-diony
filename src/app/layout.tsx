@@ -9,6 +9,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimationDriver from "@/components/AnimationDriver";
+import InquiryModal from "@/components/InquiryModal";
 
 const notoSerif = Noto_Serif_TC({
   subsets: ["latin"],
@@ -60,6 +61,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <InquiryModal />
       </body>
     </html>
   );

@@ -1,4 +1,3 @@
-import Placeholder from "@/components/Placeholder";
 import { IconLeaf, IconWave, IconHeart, IconGlobeFilled } from "@/components/icons";
 
 const PILLARS = [
@@ -20,8 +19,8 @@ export default function StoryDetail() {
   return (
     <div>
       {/* 主視覺 */}
-      <div style={{ position: "relative", aspectRatio: "16/7", borderRadius: "var(--radius-xl)", overflow: "hidden", marginBottom: 80 }}>
-        <Placeholder label="品牌情境照 · 工藝與療癒" variant="warm" />
+      <div data-anim="img" data-delay="80" style={{ position: "relative", aspectRatio: "16/7", borderRadius: "var(--radius-xl)", overflow: "hidden", marginBottom: 80 }}>
+        <img src="/images/story.png" alt="麥法迪聲音工藝" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
       </div>
 
       {/* 故事文案 */}

@@ -62,16 +62,16 @@ export default function Header() {
               <IconGlobe size={14} />
               {lang === "zh" ? "EN" : "中文"}
             </button>
-            <Link className="btn btn--primary" href="/contact">
+            <button type="button" className="btn btn--primary" data-inquiry>
               {label("產品詢價", "Product Inquiry")} <span className="arrow" />
-            </Link>
+            </button>
           </div>
 
           {/* Mobile: inquiry btn + hamburger */}
-          <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 10 }} className="mobile-actions">
-            <Link className="btn btn--primary" href="/contact" style={{ fontSize: 13, padding: "9px 16px" }}>
+          <div style={{ marginLeft: "auto", alignItems: "center", gap: 10 }} className="mobile-actions">
+            <button type="button" className="btn btn--primary" data-inquiry style={{ fontSize: 13, padding: "9px 16px" }}>
               {label("產品詢價", "Inquiry")}
-            </Link>
+            </button>
             <button
               className="hamburger"
               onClick={() => setMenuOpen(true)}
@@ -117,9 +117,9 @@ export default function Header() {
             <IconGlobe size={14} />
             {lang === "zh" ? "Switch to English" : "切換中文"}
           </button>
-          <Link className="btn btn--primary" href="/contact" onClick={() => setMenuOpen(false)}>
+          <button type="button" className="btn btn--primary" data-inquiry onClick={() => setMenuOpen(false)}>
             {label("產品詢價", "Inquiry")} <span className="arrow" />
-          </Link>
+          </button>
         </div>
       </div>
 

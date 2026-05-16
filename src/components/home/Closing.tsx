@@ -14,9 +14,9 @@ export default function Closing() {
           <span className="en">The Art of Sound  ·  The Power of Healing  ·  A Connected World</span>
         </p>
         <div className="closing__cta" data-anim="fade" data-delay="420">
-          <Link className="btn btn--warm" href="/contact">
+          <button type="button" className="btn btn--warm" data-inquiry>
             <span className="zh">展開合作對話</span><span className="en">Start a Conversation</span> <span className="arrow" />
-          </Link>
+          </button>
           <Link className="btn btn--ghost" href="/products" style={{ borderColor: "rgba(246,242,232,0.4)", color: "var(--paper)" }}>
             <span className="zh">瀏覽產品系列</span><span className="en">Browse Products</span>
           </Link>

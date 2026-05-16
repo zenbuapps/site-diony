@@ -15,7 +15,7 @@ export default function StoryPage() {
         <LeafSprig style={{ position: "absolute", right: -60, top: 40, color: "var(--green-300)" }} scale={1.4} rotate={168} />
         <div className="container">
           <div className="section-eyebrow">Brand Story</div>
-          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(40px,4vw,64px)", fontWeight: 500, color: "var(--green-900)", margin: "0 0 20px", lineHeight: 1.2 }}>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(32px,3.4vw,52px)", fontWeight: 500, color: "var(--green-900)", margin: "0 0 20px", lineHeight: 1.2, letterSpacing: "0.04em" }}>
             聲學煉金術
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.85, color: "var(--ink-700)", maxWidth: 560, margin: "0 0 80px" }}>
@@ -23,7 +23,7 @@ export default function StoryPage() {
           </p>
           <StoryDetail />
           <div style={{ marginTop: 80, textAlign: "center" }}>
-            <Link className="btn btn--primary" href="/contact">與我們展開合作 <span className="arrow" /></Link>
+            <button type="button" className="btn btn--primary" data-inquiry>與我們展開合作 <span className="arrow" /></button>
           </div>
         </div>
       </section>

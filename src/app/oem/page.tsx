@@ -14,7 +14,7 @@ export default function OEMPage() {
         <LeafSprig style={{ position: "absolute", left: -60, top: 60, color: "var(--green-300)" }} scale={1.3} rotate={-10} />
         <div className="container">
           <div className="section-eyebrow">OEM / ODM</div>
-          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(40px,4vw,64px)", fontWeight: 500, color: "var(--green-900)", margin: "0 0 20px", lineHeight: 1.2 }}>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(32px,3.4vw,52px)", fontWeight: 500, color: "var(--green-900)", margin: "0 0 20px", lineHeight: 1.25, letterSpacing: "0.04em" }}>
             從概念到成品，<br />成就您的品牌願景。
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.85, color: "var(--ink-700)", maxWidth: 560, margin: "0 0 80px" }}>

@@ -23,7 +23,7 @@ export default function ProductsPage() {
           </p>
           <ProductGrid />
           <div style={{ marginTop: 80, textAlign: "center" }}>
-            <Link className="btn btn--primary" href="/contact">洽詢 OEM / ODM 合作 <span className="arrow" /></Link>
+            <button type="button" className="btn btn--primary" data-inquiry>洽詢 OEM / ODM 合作 <span className="arrow" /></button>
           </div>
         </div>
       </section>

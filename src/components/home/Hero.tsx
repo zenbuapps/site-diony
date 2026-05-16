@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       <div data-anim="fade" data-delay="600" style={{ marginTop: 96, borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", padding: "22px 0", overflow: "hidden", display: "flex", gap: 64, whiteSpace: "nowrap", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "0.22em", color: "var(--green-700)", textTransform: "uppercase" }}>
-        <div style={{ display: "flex", gap: 64, animation: "marquee 32s linear infinite" }}>
+        <div style={{ display: "flex", gap: 64, animation: "marquee 64s linear infinite" }}>
           {[0, 1, 2].map((i) => (
             <span key={i} style={{ display: "flex", gap: 64 }}>
               {ITEMS.map((item) => <span key={item}>✦ {item}</span>)}
