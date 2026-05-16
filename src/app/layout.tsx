@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimationDriver from "@/components/AnimationDriver";
 
 const notoSerif = Noto_Serif_TC({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
       className={`${notoSerif.variable} ${notoSans.variable} ${cormorant.variable} ${jetbrains.variable}`}
     >
       <body>
+        <AnimationDriver />
         <Header />
         {children}
         <Footer />

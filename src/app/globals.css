@@ -313,3 +313,156 @@ section { position: relative; z-index: 1; }
 .contact-form input:focus,
 .contact-form textarea:focus { border-color: var(--green-600); }
 .contact-form textarea { min-height: 140px; resize: vertical; }
+
+/* ── Animation system ── */
+[data-anim] { opacity: 0; }
+
+[data-anim="blur"] {
+  filter: blur(14px);
+  transform: translateY(20px);
+  transition:
+    opacity   1s   cubic-bezier(0.16, 1, 0.3, 1),
+    filter    1s   cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s   cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-anim="img"] {
+  filter: blur(10px);
+  transform: scale(1.05);
+  transition:
+    opacity   1.5s cubic-bezier(0.16, 1, 0.3, 1),
+    filter    1.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-anim="fade"] {
+  transform: translateY(28px);
+  transition:
+    opacity   0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-anim].in {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-anim] { opacity: 1 !important; filter: none !important; transform: none !important; transition: none !important; }
+}
+
+/* ── Language system ── */
+.en { display: none; }
+[data-lang="en"] .zh { display: none; }
+[data-lang="en"] .en { display: inline; }
+.en-block { display: none; }
+[data-lang="en"] .zh-block { display: none; }
+[data-lang="en"] .en-block { display: block; }
+
+/* ── Mobile menu overlay ── */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 200;
+  background: var(--paper);
+  display: flex; flex-direction: column;
+  padding: 0 24px 40px;
+  transform: translateX(100%);
+  transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.mobile-menu.open { transform: translateX(0); pointer-events: all; }
+.mobile-menu__head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 0; border-bottom: 1px solid var(--line-soft);
+}
+.mobile-menu__close {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--line); display: grid; place-items: center;
+  color: var(--ink-700); cursor: pointer; background: none;
+  transition: all .2s;
+}
+.mobile-menu__close:hover { background: var(--green-600); color: var(--paper); border-color: var(--green-600); }
+.mobile-menu__nav { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+.mobile-menu__link {
+  display: block; font-family: var(--font-serif);
+  font-size: clamp(26px, 7vw, 36px); font-weight: 500;
+  color: var(--green-900); padding: 12px 0;
+  border-bottom: 1px solid var(--line-soft);
+  transition: color .2s, padding-left .2s;
+}
+.mobile-menu__link:hover { color: var(--green-600); padding-left: 8px; }
+.mobile-menu__footer { display: flex; align-items: center; justify-content: space-between; }
+.hamburger {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 44px; height: 44px; cursor: pointer; background: none;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 10px 10px;
+  transition: all .2s;
+}
+.hamburger span { display: block; height: 1.5px; background: var(--ink-700); transition: all .3s; border-radius: 2px; }
+.hamburger:hover { border-color: var(--green-600); }
+.hamburger:hover span { background: var(--green-600); }
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
+  color: var(--ink-700); background: none; cursor: pointer;
+  padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px;
+  transition: all .2s; font-family: inherit;
+}
+.lang-btn:hover { border-color: var(--green-600); color: var(--green-600); }
+/* mobile-actions only shows on mobile; desktop shows header__right */
+.mobile-actions { display: none; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero__title { font-size: clamp(40px, 6vw, 60px); }
+  .hero__visual { aspect-ratio: 16/9; }
+  .story__grid { grid-template-columns: 1fr; gap: 48px; }
+  .story__visual { aspect-ratio: 16/9; order: -1; }
+  .science__inner { grid-template-columns: 1fr; gap: 48px; }
+  .science__features { grid-template-columns: repeat(3, 1fr); }
+  .oem__head { grid-template-columns: 1fr; gap: 32px; }
+  .oem__grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .pillars { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+
+@media (max-width: 768px) {
+  .container { width: min(100%, 100% - 40px); }
+  .nav { display: none; }
+  .header__right { display: none; }
+  .hamburger { display: flex; }
+  .mobile-actions { display: flex; }
+  .hero { padding: 56px 0 0; }
+  .hero__grid { min-height: unset; }
+  .hero__title { font-size: clamp(36px, 8vw, 52px); }
+  .hero__lead { font-size: 15px; }
+  .hero__ctas { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .hero__visual { aspect-ratio: 4/3; border-radius: var(--radius-lg); }
+  .story { padding: 80px 0 72px; }
+  .story__grid { gap: 36px; }
+  .story__body { font-size: 15px; }
+  .pillars { grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; padding-top: 40px; }
+  .products { padding: 72px 0; }
+  .product-card { flex: 0 0 calc(100% - 20px); }
+  .science { padding: 72px 0; }
+  .science__panel { padding: 48px 28px; }
+  .science__features { grid-template-columns: 1fr; gap: 24px; }
+  .oem { padding: 72px 0; }
+  .oem__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .oem-card { padding: 24px 20px; }
+  .closing { padding: 100px 0 90px; }
+  .closing__title { font-size: clamp(30px, 7vw, 48px); }
+  .closing__cta { flex-direction: column; align-items: center; gap: 10px; }
+  .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer__legal { flex-direction: column; gap: 10px; text-align: center; }
+  .product-grid { grid-template-columns: 1fr; gap: 24px; }
+  .site-header__inner { padding: 14px 0; gap: 16px; }
+  .brand__name { font-size: 16px; }
+  .brand__name em { font-size: 17px; }
+}
+
+@media (max-width: 480px) {
+  .oem__grid { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .science__features { grid-template-columns: 1fr; }
+  .hero__ctas .btn { width: 100%; justify-content: center; }
+}

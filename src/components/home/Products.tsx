@@ -15,8 +15,8 @@ export default function Products() {
       <div className="container">
         <div className="products__head">
           <div>
-            <div className="section-eyebrow">Product Series</div>
-            <h2 className="products__title">
+            <div className="section-eyebrow" data-anim="blur" data-delay="0">Product Series</div>
+            <h2 className="products__title" data-anim="blur" data-delay="120">
               產品系列 <span style={{ fontFamily: "var(--font-en)", fontStyle: "italic", color: "var(--ink-400)", fontSize: "0.7em" }}>· Collection</span>
             </h2>
           </div>
@@ -36,7 +36,7 @@ export default function Products() {
             style={{ transform: `translateX(calc((-100% / ${VISIBLE}) * ${index} - ${(index * 28) / VISIBLE}px))` }}
           >
             {PRODUCTS.map((p, i) => (
-              <Link className="product-card" key={i} href="/products">
+              <Link className="product-card" key={i} href="/products" data-anim="blur" data-delay={`${200 + i * 80}`}>
                 <div className="product-card__visual">
                   <img src={p.image} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                 </div>
