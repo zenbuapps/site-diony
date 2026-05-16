@@ -1,6 +1,6 @@
 import Placeholder from "@/components/Placeholder";
 import { IconArrowRight } from "@/components/icons";
-import { PRODUCTS } from "@/components/home/Products";
+import { PRODUCTS } from "@/data/products";
 
 export default function ProductGrid() {
   return (
