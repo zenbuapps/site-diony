@@ -52,11 +52,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* 地圖 placeholder */}
               <div style={{ marginTop: 40, height: 200, borderRadius: "var(--radius-lg)", overflow: "hidden" }}>
-                <div className="ph ph--warm" style={{ height: "100%" }}>
-                  <span className="ph__label">台中市 烏日區 地圖</span>
-                </div>
+                <img src="/images/contact-map.png" alt="台中市烏日區地圖" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
               </div>
             </div>
 

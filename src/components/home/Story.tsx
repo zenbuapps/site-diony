@@ -1,6 +1,5 @@
 import Link from "next/link";
 import LeafSprig from "@/components/LeafSprig";
-import Placeholder from "@/components/Placeholder";
 import { IconLeaf, IconWave, IconHeart, IconGlobeFilled } from "@/components/icons";
 
 const PILLARS = [
@@ -30,7 +29,7 @@ export default function Story() {
           </Link>
         </div>
         <div className="story__visual">
-          <Placeholder label="品牌情境照 · 工藝與療癒" variant="warm" />
+          <img src="/images/story.png" alt="台灣手工銅器工藝" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         </div>
       </div>
 

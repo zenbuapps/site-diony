@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Placeholder from "@/components/Placeholder";
 import { IconArrowLeft, IconArrowRight } from "@/components/icons";
 import { PRODUCTS } from "@/data/products";
 
@@ -39,7 +38,7 @@ export default function Products() {
             {PRODUCTS.map((p, i) => (
               <Link className="product-card" key={i} href="/products">
                 <div className="product-card__visual">
-                  <Placeholder label={p.en.toUpperCase()} variant={i % 2 === 1 ? "warm" : "default"} />
+                  <img src={p.image} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                 </div>
                 <div className="product-card__row">
                   <div>

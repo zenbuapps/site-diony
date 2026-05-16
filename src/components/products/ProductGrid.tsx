@@ -1,4 +1,3 @@
-import Placeholder from "@/components/Placeholder";
 import { IconArrowRight } from "@/components/icons";
 import { PRODUCTS } from "@/data/products";
 
@@ -8,7 +7,7 @@ export default function ProductGrid() {
       {PRODUCTS.map((p, i) => (
         <div key={i} className="product-card" style={{ flex: "none" }}>
           <div className="product-card__visual" style={{ aspectRatio: "1/1", borderRadius: "var(--radius-lg)", overflow: "hidden", marginBottom: 20 }}>
-            <Placeholder label={p.en.toUpperCase()} variant={i % 2 === 1 ? "warm" : "default"} />
+            <img src={p.image} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </div>
           <div className="product-card__row">
             <div>

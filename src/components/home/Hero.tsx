@@ -1,6 +1,5 @@
 import Link from "next/link";
 import LeafSprig from "@/components/LeafSprig";
-import Placeholder from "@/components/Placeholder";
 
 const ITEMS = ["Singing Bowls · 頌缽", "Wind Chimes · 風鈴", "Tuning Forks · 音叉", "Crystal Bowls · 水晶缽", "Sound Sticks · 手搖音束", "OEM / ODM Partner"];
 
@@ -30,7 +29,7 @@ export default function Hero() {
         <div style={{ position: "relative" }}>
           <div className="hero__decor hero__decor--top">EST · 2008 / TAICHUNG · TAIWAN</div>
           <div className="hero__visual">
-            <Placeholder label="HERO · 頌缽 + 風鈴情境照" />
+            <img src="/images/hero.png" alt="頌缽與風鈴情境" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none", opacity: 0.5 }} viewBox="0 0 400 480" preserveAspectRatio="none">
               <g stroke="rgba(246,242,232,0.45)" strokeWidth="0.8" fill="none">
                 <path d="M 0 380 Q 100 360, 200 380 T 400 380" />
