@@ -2,44 +2,48 @@
    麥法迪 Dionysus — Design tokens
    ============================================ */
 :root {
-  --green-900: #2d3a2a;
-  --green-800: #3d4d3a;
-  --green-700: #51664b;
-  --green-600: #6b7f63;
-  --green-500: #8a9c80;
-  --green-400: #aab9a0;
-  --green-300: #c7d1bd;
-  --green-200: #dfe5d6;
-  --green-100: #ecefe5;
-  --green-50:  #f4f6ee;
+  /* Brand primary: #6B7C64 (forest green) */
+  --green-900: #28302a;
+  --green-800: #374239;
+  --green-700: #4c5e4a;
+  --green-600: #6B7C64;   /* brand primary */
+  --green-500: #8a9b83;
+  --green-400: #a7b5a0;
+  --green-300: #C4C8B5;   /* brand sage */
+  --green-200: #dde0d5;
+  --green-100: #ecede7;
+  --green-50:  #f5f6f2;
 
-  --paper:     #f6f2e8;
-  --paper-2:   #efeadc;
-  --bone:      #ebe4d2;
-  --sand:      #d9cfb6;
+  /* Background neutrals */
+  --paper:     #f2f2f0;
+  --paper-2:   #DCDCDC;   /* brand light gray */
+  --bone:      #e8e5dd;
+  --sand:      #d4cfc4;
 
-  --warm-700:  #8a5a3b;
-  --warm-600:  #a3704c;
-  --warm-500:  #b8865a;
-  --warm-400:  #ca9d76;
-  --warm-300:  #dcb795;
+  /* Warm accent: #CABC9F (warm beige) */
+  --warm-700:  #8a7d65;
+  --warm-600:  #a8997c;
+  --warm-500:  #CABC9F;   /* brand beige */
+  --warm-400:  #d8ccb5;
+  --warm-300:  #e8e1d2;
 
-  --ink-900:   #1f2620;
-  --ink-700:   #3a443a;
-  --ink-500:   #61685e;
-  --ink-400:   #8a8d82;
-  --ink-300:   #a8aa9e;
+  /* Text: #545454 (charcoal) */
+  --ink-900:   #262626;
+  --ink-700:   #3d3d3d;
+  --ink-500:   #545454;   /* brand charcoal */
+  --ink-400:   #787878;
+  --ink-300:   #9e9e9e;
 
-  --line:      rgba(61, 77, 58, 0.14);
-  --line-soft: rgba(61, 77, 58, 0.08);
+  --line:      rgba(107, 124, 100, 0.15);
+  --line-soft: rgba(107, 124, 100, 0.08);
 
   --radius-sm: 6px;
   --radius:    14px;
   --radius-lg: 22px;
   --radius-xl: 28px;
 
-  --shadow-sm: 0 1px 2px rgba(45,58,42,.04), 0 4px 14px rgba(45,58,42,.05);
-  --shadow:    0 4px 12px rgba(45,58,42,.06), 0 24px 48px rgba(45,58,42,.08);
+  --shadow-sm: 0 1px 2px rgba(107,124,100,.04), 0 4px 14px rgba(107,124,100,.06);
+  --shadow:    0 4px 12px rgba(107,124,100,.07), 0 24px 48px rgba(107,124,100,.10);
 
   --font-serif: var(--font-noto-serif), "Songti TC", serif;
   --font-sans:  var(--font-noto-sans), "PingFang TC", system-ui, sans-serif;
@@ -68,8 +72,8 @@ body::before {
   position: fixed; inset: 0;
   pointer-events: none; z-index: 0; opacity: 0.35;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(184,134,90,.05), transparent 32%),
-    radial-gradient(circle at 88% 78%, rgba(61,77,58,.06), transparent 38%);
+    radial-gradient(circle at 12% 18%, rgba(202,188,159,.06), transparent 32%),
+    radial-gradient(circle at 88% 78%, rgba(107,124,100,.07), transparent 38%);
 }
 
 .container {
